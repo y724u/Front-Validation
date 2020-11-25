@@ -1,6 +1,7 @@
 /*! destyle.css v1.0.15 | MIT License | https://github.com/nicolas-cusan/destyle.css */
 /* Reset box-model */
 /* ============================================ */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -467,4 +468,64 @@ template {
  */
 [hidden] {
   display: none;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #000000;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+}
+
+.validation {
+  margin-top: 44px;
+}
+
+.validation__container {
+  background-color: #ffffff;
+  width: 408px;
+  height: 422px;
+  margin: 0 auto;
+}
+
+.validation__box {
+  padding: 40px 0 0 34px;
+}
+
+.validation__list {
+  font-weight: bold;
+  position: relative;
+}
+
+.validation__list span {
+  position: absolute;
+  margin-top: 1px;
+}
+
+.validation__list input {
+  border: 1px solid #dddddd;
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 344px;
+  height: 38px;
+  margin: 8px 0 26px 0;
+}
+
+.validation__list input::placeholder {
+  color: #dddddd;
+  padding-left: 12px;
+}
+
+.validation__label {
+  background-color: #ff6f7d;
+  border-radius: 4px;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 12px;
+  margin-right: 8px;
+  line-height: 17px;
+  text-align: center;
+  width: 40px;
+  height: 19px;
 }

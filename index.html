@@ -1,14 +1,46 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css">
   <title></title>
 </head>
+
 <body>
+  <section class="validation">
+    <div class="validation__container">
+      <form action="#" class="validation__form">
+        <div class="validation__box">
+          <ul class="validation__input">
+
+            <li class="validation__list">
+              <label class="validation__label" for="#">必須</label><span>名前</span><br>
+              <input type="text" placeholder="田中 太郎">
+            </li>
+
+            <li class="validation__list">
+              <label class="validation__label" for="#">必須</label><span>住所</span> <br>
+              <input type="text" placeholder="東京都千代田区千代田１−１">
+            </li>
+
+            <li class="validation__list">職業<br>
+              <input type="text" placeholder="エンジニア">
+            </li>
+
+          </ul>
+          <div class="validation__button">
+            <label for="registration"><input type="submit" value="登録" id="registration"></label>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </section>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="./script.js"></script>
+  <script src="./script.js"></script>
 </body>
+
 </html>
