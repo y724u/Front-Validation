@@ -26,6 +26,7 @@ body {
 
   &__list {
     position: relative;
+    margin-bottom: 36px;
 
     span {
       font-weight: bold;
@@ -40,7 +41,18 @@ body {
     border-radius: 4px;
     width: 344px;
     height: 38px;
-    margin: 8px 0 26px 0;
+    margin-top: 8px;
+    padding-left: 12px;
+  }
+
+  &__alert {
+    border: 1px solid red;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: #FFEFEF;
+    width: 344px;
+    height: 38px;
+    margin-top: 8px;
     padding-left: 12px;
   }
 
@@ -59,6 +71,17 @@ body {
     text-align: center;
     width: 40px;
     height: 19px;
+  }
+
+  &__notice {
+    color: #FF6F7D;
+    font-size: 10px;
+    margin-top: 2px;
+    visibility: hidden;
+
+    &.show__notice {
+      visibility: visible;
+    }
   }
 
   &__button {
