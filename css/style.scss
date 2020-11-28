@@ -16,7 +16,7 @@ body {
   &__container {
     background-color: #ffffff;
     width: 408px;
-    height: 422px;
+    height: auto;
     margin: 0 auto;
   }
 
@@ -85,7 +85,7 @@ body {
   }
 
   &__button {
-    margin-top: 20px;
+    padding-bottom: 57px;
   }
 
   &__registration {
@@ -93,8 +93,8 @@ body {
     border-radius: 4px;
     color: #ffffff;
     display: block;
-    // opacity: 1;
-    // pointer-events: none;
+    opacity: 0.4;
+    pointer-events: none;
     margin: 0 auto;
     font-weight: bold;
     text-align: center;
@@ -102,33 +102,17 @@ body {
     height: 37px;
     line-height: 30px;
 
-    // &.button__allow {
-    //   pointer-events: auto;
-    //   opacity: 1;
-    // }
-  }
-
-  &__input {
-    // background-color: #8a8b8c;
-    // border-radius: 4px;
-    // color: #ffffff;
-    // display: block;
-    // // opacity: 1;
-    // // pointer-events: none;
-    // margin: 0 auto;
-    // font-weight: bold;
-    // text-align: center;
-    // width: 182px;
-    // height: 37px;
-    // line-height: 30px;
-
-    // // &.button__allow {
-    // //   pointer-events: auto;
+    &.button__allow {
+      pointer-events: auto;
       opacity: 1;
-    // // }
+    }
   }
 
-  &__input:disabled {
-    opacity: 0.4;
-  }
+  // &__input {
+
+  // }
+
+  // &__input:disabled {
+  //   opacity: 0.4;
+  // }
 }

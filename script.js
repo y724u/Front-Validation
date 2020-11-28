@@ -16,6 +16,7 @@ $(function () {
       // もし値が入ってない場合は、classを付け替える
       $($(this)).attr('class', 'validation__alert');
       $($(this)).next().addClass('show__notice');
+
       // alert('名前を入力してください！');
     }
     else {
@@ -23,18 +24,40 @@ $(function () {
       // 入っている場合はそのままにする
       $($(this)).next().removeClass('show__notice');
     }
-
   });
 
-  // 必須項目のテキストフォーカスが外れたときに、2つのjs-textCheckに値が入っているかチェックする
-  $('.test , .test1').on('change', function () {
-    if ($('.test1').val() !== "" && $('.test').val() !== false) {
-      // $('.validation__registration').addClass('button__allow');
-      $('#registration').prop('disabled', false);
-    } else {
-      $('#registration').prop('disabled', true);
+
+  $('.validation__list input').on('blur', function () {
+    if(
+    $('#test1').val()!==''&&
+    $('#test2').val()!==''
+    ){
+      console.log('値が入ってる');
+      $('.validation__registration').addClass('button__allow');
+    }else{
+      $('.validation__registration').removeClass('button__allow');
+      console.log('値が入ってない');
     }
+
   });
+
+
+
+
+
+
+
+
+
+  // // 必須項目のテキストフォーカスが外れたときに、2つのjs-textCheckに値が入っているかチェックする
+  // $('.test , .test1').on('change', function () {
+  //   if ($('.test1').val() !== "" && $('.test').val() !== false) {
+  //     // $('.validation__registration').addClass('button__allow');
+  //     $('#registration').prop('disabled', false);
+  //   } else {
+  //     $('#registration').prop('disabled', true);
+  //   }
+  // });
 
   // $('.js-checkbox').on('change', function () {
   //   if ($(this).prop('checked'))
@@ -43,15 +66,4 @@ $(function () {
   //     $('.js-button').removeClass('box__checked');
   // });
 
-
-
-  // 値が入力されていなければaddClsas「入力必須項目です」とフォームの下に表示する
-
-  // 値が入力されていれば何もしない
-
-
-
-  // ２つの、必須項目にテキストが入っていればaddクラス、pointer-eventを付与する
-
-  // １つでも入っていない場合は、removeClass
 });

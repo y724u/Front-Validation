@@ -485,7 +485,7 @@ body {
 .validation__container {
   background-color: #ffffff;
   width: 408px;
-  height: 422px;
+  height: auto;
   margin: 0 auto;
 }
 
@@ -554,7 +554,7 @@ body {
 }
 
 .validation__button {
-  margin-top: 20px;
+  padding-bottom: 57px;
 }
 
 .validation__registration {
@@ -562,6 +562,8 @@ body {
   border-radius: 4px;
   color: #ffffff;
   display: block;
+  opacity: 0.4;
+  pointer-events: none;
   margin: 0 auto;
   font-weight: bold;
   text-align: center;
@@ -570,10 +572,7 @@ body {
   line-height: 30px;
 }
 
-.validation__input {
+.validation__registration.button__allow {
+  pointer-events: auto;
   opacity: 1;
-}
-
-.validation__input:disabled {
-  opacity: 0.4;
 }
