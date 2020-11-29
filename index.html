@@ -14,27 +14,28 @@
       <form action="#" class="validation__form">
         <div class="validation__box">
           <ul class="validation__input">
-
-            <li class="validation__list" >
-              <label class="validation__label" for="#">必須</label><span>名前</span><br>
-              <input class="js-textCheck validation__text" type="text" placeholder="田中 太郎" id="test1">
+            <li class="validation__list js-list">
+              <label class="validation__label" for="#">必須</label>
+              <span>名前</span><br>
+              <input class="js-textCheck validation__text" id="js-inputText1" type="text" placeholder="田中 太郎">
               <p class="validation__notice js-notice">入力必須項目です</p>
             </li>
-
+            <li class="validation__list js-list">
+              <label class="validation__label" for="#">必須</label>
+              <span>住所</span><br>
+              <input class="js-textCheck validation__text" id='js-inputText2' type="text" placeholder="東京都千代田区千代田１−１">
+              <p class="validation__notice js-notice">入力必須項目です</p>
+            </li>
             <li class="validation__list">
-              <label class="validation__label" for="#">必須</label><span>住所</span><br>
-              <input class="js-textCheck validation__text" type="text" placeholder="東京都千代田区千代田１−１" id='test2'>
-              <p class="validation__notice js-notice">入力必須項目です</p>
-            </li>
-
-            <li class="validation__list">職業<br>
+              <span>職業</span><br>
               <input class="validation__text" type="text" placeholder="エンジニア">
             </li>
-
           </ul>
         </div>
         <div class="validation__button">
-          <label class="validation__registration" for="registration"><input class="validation__input" type="submit" value="登録" id="registration"></label>
+          <label class="js-registration" for="registration">
+            <input class="validation__input" type="submit" value="登録" id="registration">
+          </label>
         </div>
       </form>
     </div>

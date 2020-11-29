@@ -1,69 +1,34 @@
 $(function () {
-  // フロントバリデーション
-  // - 入力の必須チェックを行う
-
-  // ・フォームからフォーカスが外れた時に、値があるかチェックする(必須項目の場合のみ)
-  // ・値が入力されていなければ「入力必須項目です」とフォームの下に表示する
-  // ・フォームからフォーカスが外れた時に、値が入力されてたらエラー表示しない
-  // ・必須項目が全て入力されたらボタンを活性化する
-  // ・必須項目が全て入力されるまでは活性化させず送信できないようにする
-
-
-
   // 必須項目のテキストフォーカスが外れたときに、そこに値が入っているかチェックする
   $('.js-textCheck').on('blur', function () {
-    if ($(this).val() === '') {
-      // もし値が入ってない場合は、classを付け替える
-      $($(this)).attr('class', 'validation__alert');
-      $($(this)).next().addClass('show__notice');
-
-      // alert('名前を入力してください！');
+    const $this = $(this);
+    const $noticeClass = $this.next('.js-notice');
+    // もし値が入ってない場合は、alertClassを付ける
+    if ($this.val() === '') {
+      $($this).attr('class', 'validation__alert');
+      // inputの下にnoticeを表示する
+      $($noticeClass).addClass('show__notice');
     }
     else {
-      $($(this)).attr('class', 'validation__text');
-      // 入っている場合はそのままにする
-      $($(this)).next().removeClass('show__notice');
+      // 値が入っている場合はtextClassをつける
+      $($this).attr('class', 'validation__text');
+      // inputの下にnoticeを表示しない
+      $($noticeClass).removeClass('show__notice');
     }
   });
 
-
-  $('.validation__list input').on('blur', function () {
-    if(
-    $('#test1').val()!==''&&
-    $('#test2').val()!==''
-    ){
-      console.log('値が入ってる');
-      $('.validation__registration').addClass('button__allow');
-    }else{
-      $('.validation__registration').removeClass('button__allow');
-      console.log('値が入ってない');
+  // テキストのフォーカスが外れた時
+  $('.js-list input').on('blur', function () {
+    // もし必須項目のテキストがどちらも空白じゃない場合
+    if (
+      $('#js-inputText1').val() !== '' &&
+      $('#js-inputText2').val() !== ''
+    ) {
+      // ボタン活性化のクラスをつける
+      $('.js-registration').addClass('button__allow');
+    } else {
+      // 空白がある場合はクラスを外す
+      $('.js-registration').removeClass('button__allow');
     }
-
   });
-
-
-
-
-
-
-
-
-
-  // // 必須項目のテキストフォーカスが外れたときに、2つのjs-textCheckに値が入っているかチェックする
-  // $('.test , .test1').on('change', function () {
-  //   if ($('.test1').val() !== "" && $('.test').val() !== false) {
-  //     // $('.validation__registration').addClass('button__allow');
-  //     $('#registration').prop('disabled', false);
-  //   } else {
-  //     $('#registration').prop('disabled', true);
-  //   }
-  // });
-
-  // $('.js-checkbox').on('change', function () {
-  //   if ($(this).prop('checked'))
-  //     $('.js-button').addClass('box__checked');
-  //   else
-  //     $('.js-button').removeClass('box__checked');
-  // });
-
 });
