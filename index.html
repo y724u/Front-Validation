@@ -15,20 +15,18 @@
         <div class="validation__box">
           <ul class="validation__input">
             <li class="validation__list js-list">
-              <label class="validation__label" for="#">必須</label>
-              <span>名前</span><br>
+              <label class="validation__item validation__required" for="js-inputText1">名前</label>
               <input class="js-textCheck validation__text" id="js-inputText1" type="text" placeholder="田中 太郎">
               <p class="validation__notice js-notice">入力必須項目です</p>
             </li>
             <li class="validation__list js-list">
-              <label class="validation__label" for="#">必須</label>
-              <span>住所</span><br>
+              <label class="validation__item validation__required" for="js-inputText2">住所</label>
               <input class="js-textCheck validation__text" id='js-inputText2' type="text" placeholder="東京都千代田区千代田１−１">
               <p class="validation__notice js-notice">入力必須項目です</p>
             </li>
             <li class="validation__list">
-              <span>職業</span><br>
-              <input class="validation__text" type="text" placeholder="エンジニア">
+              <label class="validation__item" for="js-inputText3">職業</label><br>
+              <input class="validation__text" id="js-inputText3" type="text" placeholder="エンジニア">
             </li>
           </ul>
         </div>
@@ -40,6 +38,7 @@
       </form>
     </div>
   </section>
+
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="./script.js"></script>

@@ -8,11 +8,20 @@ body {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 16px;
   letter-spacing: 0.04em;
+  input[type="submit"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+  }
 }
+
 
 .validation {
   margin-top: 44px;
-
   &__container {
     background-color: #ffffff;
     width: 408px;
@@ -25,13 +34,36 @@ body {
   }
 
   &__list {
-    position: relative;
     margin-bottom: 36px;
+  }
 
-    span {
+  &__item {
+      color: #000000;
+      display: inline-block;
+      height: 17px;
+      line-height: 17px;
       font-weight: bold;
-      position: absolute;
-      margin-top: 1px;
+  }
+
+  &__required {
+    position: relative;
+    margin-left: 48px;
+
+    &::before {
+    position: absolute;
+    top: -1px;
+    left: -48px;
+    content: '必須';
+    background-color: #ff6f7d;
+    border-radius: 4px;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 12px;
+    margin-right: 8px;
+    line-height: 17px;
+    text-align: center;
+    width: 40px;
+    height: 19px;
     }
   }
 
@@ -90,26 +122,31 @@ body {
   &__button {
     padding-bottom: 57px;
   }
+
+  &__input {
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: bold;
+  }
 }
 
 .js {
   &-registration {
     background-color: #8a8b8c;
     border-radius: 4px;
-    color: #ffffff;
     display: block;
     opacity: 0.4;
     pointer-events: none;
     margin: 0 auto;
-    font-weight: bold;
     text-align: center;
     width: 182px;
     height: 37px;
-    line-height: 30px;
+    line-height: 35px;
 
     &.button__allow {
-      pointer-events: auto;
+      cursor: pointer;
       opacity: 1;
+      pointer-events: auto;
     }
   }
 }
