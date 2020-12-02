@@ -78,10 +78,18 @@ body {
     height: 38px;
     margin-top: 8px;
     padding-left: 12px;
+    position: relative;
+
+    &::placeholder {
+      color: #dddddd;
+    }
   }
 
-  &__text::placeholder {
-    color: #dddddd;
+  &__notice {
+    position: absolute;
+    color: #ff6f7d;
+    font-size: 10px;
+    margin-top: 5px;
   }
 
   &__alert {
@@ -99,11 +107,7 @@ body {
     }
   }
 
-  &__notice {
-    color: #ff6f7d;
-    font-size: 10px;
-    margin-top: 5px;
-  }
+
 
   &__button {
     text-align: center;
