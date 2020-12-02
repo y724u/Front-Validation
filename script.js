@@ -23,13 +23,13 @@ $(function () {
     // const $noticeClass = $this.next('.js-notice');
     // もし値が入ってない場合は、alertClassを付ける
     if ($this.val() === '') {
-      $($this).attr('class', 'validation__alert');
+      $($this).addClass('is-error');
       // inputの下にnoticeを追加する
       $($this).after('<p class="validation__notice">入力必須項目です</p>')
     }
     else {
       // 値が入っている場合はtextClassをつける
-      $($this).attr('class', 'validation__text');
+      $($this).removeClass('is-error');
       // inputの下にnoticeを削除
       $($this).next('.validation__notice').remove();
     }
