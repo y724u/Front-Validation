@@ -25,10 +25,10 @@ $(function () {
       $('#js-inputText2').val() !== ''
     ) {
       // ボタン活性化のクラスをつける
-      $('.js-registration').addClass('button__allow');
+      $('#js-registration').prop('disabled', false);
     } else {
       // 空白がある場合はクラスを外す
-      $('.js-registration').removeClass('button__allow');
+      $('#js-registration').prop('disabled', true);
     }
   });
 });

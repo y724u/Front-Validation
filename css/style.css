@@ -228,7 +228,6 @@ textarea {
   -webkit-appearance: none;
   appearance: none;
   vertical-align: middle;
-  color: inherit;
   font: inherit;
   border: 0;
   background: transparent;
@@ -479,16 +478,6 @@ body {
   letter-spacing: 0.04em;
 }
 
-body input[type="submit"] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 0;
-  border: none;
-  outline: none;
-  background: transparent;
-}
-
 .validation {
   margin-top: 44px;
 }
@@ -496,7 +485,7 @@ body input[type="submit"] {
 .validation__container {
   background-color: #ffffff;
   width: 408px;
-  height: auto;
+  height: 460px;
   margin: 0 auto;
 }
 
@@ -542,6 +531,7 @@ body input[type="submit"] {
   border: 1px solid #dddddd;
   box-sizing: border-box;
   border-radius: 4px;
+  font-weight: normal;
   width: 344px;
   height: 38px;
   margin-top: 8px;
@@ -567,19 +557,6 @@ body input[type="submit"] {
   color: #dddddd;
 }
 
-.validation__label {
-  background-color: #ff6f7d;
-  border-radius: 4px;
-  color: #ffffff;
-  display: inline-block;
-  font-size: 12px;
-  margin-right: 8px;
-  line-height: 17px;
-  text-align: center;
-  width: 40px;
-  height: 19px;
-}
-
 .validation__notice {
   color: #ff6f7d;
   font-size: 10px;
@@ -592,30 +569,25 @@ body input[type="submit"] {
 }
 
 .validation__button {
-  padding-bottom: 57px;
-}
-
-.validation__input {
-  color: #ffffff;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.js-registration {
-  background-color: #8a8b8c;
-  border-radius: 4px;
-  display: block;
-  opacity: 0.4;
-  pointer-events: none;
-  margin: 0 auto;
   text-align: center;
+  line-height: 29px;
   width: 182px;
   height: 37px;
-  line-height: 35px;
+  margin: 0 auto;
 }
 
-.js-registration.button__allow {
+.validation__registration {
+  background-color: #8A8B8C;
+  border-radius: 4px;
+  display: block;
+  color: #ffffff;
   cursor: pointer;
   opacity: 1;
-  pointer-events: auto;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+}
+
+.validation__registration:disabled {
+  opacity: 0.4;
 }
