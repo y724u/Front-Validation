@@ -10,17 +10,17 @@
 
 <body>
   <section class="validation">
-    <form class="validation__form">
+    <form class="validation__form" id="js-form">
     <div class="validation__container">
         <div class="validation__box">
           <ul class="validation__input">
             <li class="validation__list js-list">
               <label class="validation__item validation__required" for="js-inputText1">名前</label>
-              <input class="js-textCheck validation__text" id="js-inputText1" type="text" placeholder="田中 太郎">
+              <input class="js-textCheck validation__text" id="js-inputText1" type="text" placeholder="田中 太郎" required>
             </li>
             <li class="validation__list js-list">
               <label class="validation__item validation__required" for="js-inputText2">住所</label>
-              <input class="js-textCheck validation__text" id='js-inputText2' type="text" placeholder="東京都千代田区千代田１−１">
+              <input class="js-textCheck validation__text" id='js-inputText2' type="text" placeholder="東京都千代田区千代田１−１" required>
             </li>
             <li class="validation__list">
               <label class="validation__item" for="js-inputText3">職業</label><br>
