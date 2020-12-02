@@ -1,19 +1,37 @@
 $(function () {
+  // // 必須項目のテキストフォーカスが外れたときに、そこに値が入っているかチェックする
+  // $('.js-textCheck').on('blur', function () {
+  //   const $this = $(this);
+  //   const $noticeClass = $this.next('.js-notice');
+  //   // もし値が入ってない場合は、alertClassを付ける
+  //   if ($this.val() === '') {
+  //     $($this).attr('class', 'validation__alert');
+  //     // inputの下にnoticeを表示する
+  //     $($noticeClass).addClass('show__notice');
+  //   }
+  //   else {
+  //     // 値が入っている場合はtextClassをつける
+  //     $($this).attr('class', 'validation__text');
+  //     // inputの下にnoticeを表示しない
+  //     $($noticeClass).removeClass('show__notice');
+  //   }
+  // });
+
   // 必須項目のテキストフォーカスが外れたときに、そこに値が入っているかチェックする
-  $('.js-textCheck').on('blur', function () {
+  $('.js-textCheck').on('change', function () {
     const $this = $(this);
-    const $noticeClass = $this.next('.js-notice');
+    // const $noticeClass = $this.next('.js-notice');
     // もし値が入ってない場合は、alertClassを付ける
     if ($this.val() === '') {
       $($this).attr('class', 'validation__alert');
-      // inputの下にnoticeを表示する
-      $($noticeClass).addClass('show__notice');
+      // inputの下にnoticeを追加する
+      $($this).after('<p class="validation__notice">入力必須項目です</p>')
     }
     else {
       // 値が入っている場合はtextClassをつける
       $($this).attr('class', 'validation__text');
-      // inputの下にnoticeを表示しない
-      $($noticeClass).removeClass('show__notice');
+      // inputの下にnoticeを削除
+      $($this).next('.validation__notice').remove();
     }
   });
 

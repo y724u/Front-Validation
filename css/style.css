@@ -538,6 +538,10 @@ body {
   padding-left: 12px;
 }
 
+.validation__text::placeholder {
+  color: #dddddd;
+}
+
 .validation__alert {
   border: 1px solid red;
   box-sizing: border-box;
@@ -553,19 +557,10 @@ body {
   color: #dddddd;
 }
 
-.validation__text::placeholder {
-  color: #dddddd;
-}
-
 .validation__notice {
   color: #ff6f7d;
   font-size: 10px;
   margin-top: 5px;
-  visibility: hidden;
-}
-
-.validation__notice.show__notice {
-  visibility: visible;
 }
 
 .validation__button {

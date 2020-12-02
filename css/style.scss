@@ -80,6 +80,10 @@ body {
     padding-left: 12px;
   }
 
+  &__text::placeholder {
+    color: #dddddd;
+  }
+
   &__alert {
     border: 1px solid red;
     box-sizing: border-box;
@@ -95,19 +99,10 @@ body {
     }
   }
 
-  &__text::placeholder {
-    color: #dddddd;
-  }
-
   &__notice {
     color: #ff6f7d;
     font-size: 10px;
     margin-top: 5px;
-    visibility: hidden;
-
-    &.show__notice {
-      visibility: visible;
-    }
   }
 
   &__button {
